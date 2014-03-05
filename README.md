@@ -15,12 +15,15 @@ It has been changed so that:
  * it doesn't break whenever there is a version mismatch or no local gulp found
  * it falls back to loading the global gulp if it can't find a local one:
 
-    var gulpInst;
-    try {
-      gulpInst = require(env.modulePath);
-    } catch(e) {
-      gulpInst = require('gulp');
-    }
+```javascript
+var gulpInst;
+try {
+  gulpInst = require(env.modulePath);
+} catch(e) {
+  gulpInst = require('gulp');
+}
+```
+
 
 instead of:
 
